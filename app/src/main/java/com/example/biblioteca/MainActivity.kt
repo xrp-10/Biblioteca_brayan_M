@@ -4,7 +4,7 @@ package com.example.biblioteca
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.biblioteca.screens.InicioScreen
+import com.example.biblioteca.navigation.BibliotecaNavHost
 import com.example.biblioteca.ui.theme.BibliotecaTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,12 +14,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             BibliotecaTheme {
-                InicioScreen(
-                    onVerLibros = {
-                        // Próximamente Navigation Compose
-                    }
-                )
+                BibliotecaNavHost()
             }
         }
     }
 }
+
