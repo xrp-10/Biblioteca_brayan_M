@@ -10,10 +10,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
+import androidx.compose.material3.OutlinedButton
 @Composable
 fun InicioScreen(
-    onVerLibros: () -> Unit
+    onVerLibros: () -> Unit,
+    onMisReservas: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -49,6 +50,13 @@ fun InicioScreen(
             onClick = onVerLibros
         ) {
             Text("Ver Libros")
+        }
+        Spacer(modifier = Modifier.height(12.dp))
+
+        OutlinedButton(
+            onClick = onMisReservas
+        ) {
+            Text("Mis Reservas")
         }
     }
 }
